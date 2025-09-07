@@ -32,9 +32,9 @@
 
 <mirrors>
   <mirror>
-    <id>codeartifact</id>
-    <name>domainname--maven-central-store</name>
-    <url>https://domain-accountdid.d.codeartifact.region.amazonaws.com/maven/maven-central-store/</url>
+    <id>ci-aws-maven-repo-domain-maven-central-store</id>
+    <name>ci-aws-maven-repo-domain-maven-central-store</name>
+    <url>https://ci-aws-maven-repo-domain-339713188289.d.codeartifact.us-east-1.amazonaws.com/maven/maven-central-store/</url>
     <mirrorOf>*</mirrorOf>
   </mirror>
 </mirrors>
