@@ -2,27 +2,34 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  <servers>
-        <server>
-            <id>codeartifact</id>
-            <username>aws</username>
-            <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
-        </server>
-    </servers>
+  
+<servers>
+  <server>
+    <id>ci-aws-maven-repo-domain-maven-central-store</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
 <profiles>
   <profile>
-    <id>default</id>
+    <id>ci-aws-maven-repo-domain-maven-central-store</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
     <repositories>
       <repository>
-        <id>codeartifact</id>
-    <url>https://domain-accountid.d.codeartifact.region.amazonaws.com/maven/maven-central-store/</url>
+        <id>ci-aws-maven-repo-domain-maven-central-store</id>
+        <url>https://ci-aws-maven-repo-domain-339713188289.d.codeartifact.us-east-1.amazonaws.com/maven/maven-central-store/</url>
       </repository>
     </repositories>
   </profile>
 </profiles>
+
 <activeProfiles>
         <activeProfile>default</activeProfile>
-    </activeProfiles>
+</activeProfiles>
+
 <mirrors>
   <mirror>
     <id>codeartifact</id>
@@ -31,4 +38,6 @@
     <mirrorOf>*</mirrorOf>
   </mirror>
 </mirrors>
+
+
 </settings>

@@ -299,8 +299,8 @@
     <repositories>
       <repository>
         <id>codeartifact</id>
-        <name>codeartifact</name>
-    <url>https://domainame-accountid.d.codeartifact.regioncode.amazonaws.com/maven/maven-central-store/</url>
+        <name>aws</name>
+    <url>https://ci-aws-maven-repo-domain-339713188289.d.codeartifact.us-east-1.amazonaws.com/maven/maven-central-store/</url>
       </repository>
     </repositories>
 </project>
