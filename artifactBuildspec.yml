@@ -18,8 +18,9 @@ phases:
       - ln -s apache-maven-3.9.11 maven
   build:
     commands:
-      - mvn clean install -DskipTests  
-  artifacts:
-    files:
-      - target/**/*.war
-    discard-paths: yes  
+      - mvn clean install -DskipTests
+      
+artifacts:
+  files:
+    - target/**/*.war
+  discard-paths: yes  
